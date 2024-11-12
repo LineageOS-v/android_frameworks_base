@@ -172,6 +172,8 @@ static const char ZYGOTE_NICE_NAME[] = "zygote";
 
 int main(int argc, char* const argv[])
 {
+    android::base::WriteStringToFile("testZZZ", "/data/20241112-001-app_main_cpp.txt");
+
     if (!LOG_NDEBUG) {
       String8 argv_String;
       for (int i = 0; i < argc; ++i) {
